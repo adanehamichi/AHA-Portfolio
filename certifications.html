@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications – Adane Hamichi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">AH<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="synthese.html">Tableau de synthèse</a></li>
+      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="tag">Reconnaissances officielles</span>
+    <h1>Mes <span class="accent">Certifications</span></h1>
+    <p>Certifications obtenues au fil de ma formation BTS SIO</p>
+  </div>
+
+  <div class="certs-section">
+
+    <div class="certs-grid">
+
+      <!-- PIX -->
+      <div class="cert-card" style="--card-color:#ff6b35;">
+        <div class="cert-icon">🧩</div>
+        <h3>PIX</h3>
+        <div class="cert-org">Plateforme nationale · Gouvernement français</div>
+        <p>Certification officielle des compétences numériques. Évalue 5 domaines : information & données, communication & collaboration, création de contenu, protection & sécurité, environnement numérique.</p>
+        <span class="cert-badge">Compétences numériques</span>
+      </div>
+
+      <!-- RGPD -->
+      <div class="cert-card" style="--card-color:#7c3aff;">
+        <div class="cert-icon">🔒</div>
+        <h3>Certification RGPD</h3>
+        <div class="cert-org">Règlement Général sur la Protection des Données</div>
+        <p>Maîtrise du cadre légal européen de protection des données personnelles. Comprend les droits des personnes, les obligations des organismes, la gestion des violations de données et la mise en conformité.</p>
+        <span class="cert-badge">Cybersécurité · Juridique</span>
+      </div>
+
+      <!-- CISCO -->
+      <div class="cert-card" style="--card-color:#00d4aa;">
+        <div class="cert-icon">🌐</div>
+        <h3>Cisco Packet Tracer</h3>
+        <div class="cert-org">Cisco Networking Academy</div>
+        <p>Maîtrise du logiciel de simulation réseau Cisco Packet Tracer. Conception, configuration et dépannage de réseaux : routeurs, commutateurs, protocoles TCP/IP, adressage IPv4/IPv6, VLANs.</p>
+        <span class="cert-badge">Réseaux · Infrastructure</span>
+      </div>
+
+    </div>
+
+    <!-- TIMELINE PROGRESSION -->
+    <div style="margin-top:80px;">
+      <h2 class="section-title">Progression <span class="accent">technique</span></h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-tag">2024 · Lycée</span>
+            <h3>Baccalauréat Général obtenu</h3>
+            <p>Spécialités Mathématiques et Physique-Chimie — Lycée La Providence, Mesnil-Esnard</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-tag">2025 · Certifications</span>
+            <h3>PIX · RGPD · Cisco Packet Tracer</h3>
+            <p>Trois certifications acquises au cours de la première année de BTS SIO, renforçant les compétences numériques, juridiques et réseau.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-tag">2025 · Stage</span>
+            <h3>Stage ADP – Aéroports de Paris</h3>
+            <p>2 semaines en milieu professionnel — suivi de projets, réunions de pilotage, outils numériques.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 10px rgba(124,58,255,0.5);"></div>
+          <div class="tl-card" style="border-color:rgba(124,58,255,0.25);">
+            <span class="tl-tag" style="background:rgba(255,107,53,0.15);border-color:rgba(255,107,53,0.3);color:var(--accent);">Mai 2026 · À venir</span>
+            <h3>Stage développement web / cybersécurité</h3>
+            <p>5 semaines de stage recherché dans le développement web ou la cybersécurité pour mettre en pratique les acquis du BTS SIO SLAM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="nav-logo">AH<span class="dot">.</span></span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
+      </div>
+      <p>© 2026 Adane Hamichi</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

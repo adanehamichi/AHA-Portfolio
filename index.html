@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adane Hamichi – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">AH<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="synthese.html">Tableau de synthèse</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+    <div class="hero-content">
+      <span class="tag animate-fade">Étudiant BTS SIO · Option SLAM</span>
+      <h1 class="animate-up">Hamichi<br><span class="accent">Adane</span></h1>
+      <p class="hero-sub animate-up delay1">Développement Web &amp; Cybersécurité<br>Basé à Rouen, France</p>
+      <div class="hero-btns animate-up delay2">
+        <a href="competences.html" class="btn-primary">Voir mes compétences</a>
+        <a href="contact.html" class="btn-outline">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-badge animate-fade delay3">
+      <div class="badge-ring">
+        <svg viewBox="0 0 100 100" class="badge-svg">
+          <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+          <text font-size="11.5" fill="var(--accent)" font-family="Syne">
+            <textPath href="#circle">OPEN TO WORK · STAGE 5 SEMAINES · MAI 2026 · </textPath>
+          </text>
+        </svg>
+        <div class="badge-center">👋</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="strip-grid">
+      <div class="strip-card">
+        <span class="strip-icon">🎓</span>
+        <div>
+          <strong>BTS SIO SLAM</strong>
+          <p>Lycée La Châtaigneraie · 2025–2026</p>
+        </div>
+      </div>
+      <div class="strip-card">
+        <span class="strip-icon">📍</span>
+        <div>
+          <strong>Rouen, France</strong>
+          <p>Permis B · Mobilité possible</p>
+        </div>
+      </div>
+      <div class="strip-card">
+        <span class="strip-icon">🔒</span>
+        <div>
+          <strong>Cybersécurité &amp; Web</strong>
+          <p>RGPD · HTML/CSS/PHP · C#</p>
+        </div>
+      </div>
+      <div class="strip-card">
+        <span class="strip-icon">🏆</span>
+        <div>
+          <strong>3 Certifications</strong>
+          <p>PIX · RGPD · Cisco Packet Tracer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <h2 class="section-title">Expériences <span class="accent">professionnelles</span></h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-tag">Projet</span>
+          <h3>Site web dynamique – HTML/CSS/PHP</h3>
+          <p>Respect de procédures et normes, gestion de documents techniques (plans, versions) et déploiement des livrables validés. Utilisation d'outils numériques.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-tag">Stage · 2 semaines</span>
+          <h3>Stagiaire – ADP (Aéroports de Paris)</h3>
+          <p>Participation aux réunions de pilotage, prise de notes, synthèses et actions à suivre. Suivi de projets en collaboration avec les équipes internes et partenaires externes. Rigueur, organisation, respect des délais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATIONS -->
+  <section class="section section-dark">
+    <h2 class="section-title">Formation <span class="accent">académique</span></h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-year">2025–2026</div>
+        <h3>BTS SIO – SLAM</h3>
+        <p>Lycée La Châtaigneraie</p>
+        <p class="edu-detail">Services Informatiques aux Organisations<br>Option : Solutions Logicielles et Applications Métiers</p>
+      </div>
+      <div class="edu-card">
+        <div class="edu-year">2024–2025</div>
+        <h3>École d'Architecture</h3>
+        <p>UMONS (Belgique)</p>
+        <p class="edu-detail">Cursus d'architecture — rigueur, précision et gestion de projet</p>
+      </div>
+      <div class="edu-card">
+        <div class="edu-year">Juin 2024</div>
+        <h3>Baccalauréat Général</h3>
+        <p>Lycée La Providence, Mesnil-Esnard</p>
+        <p class="edu-detail">Spécialités : Mathématiques · Physique-Chimie</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Vous recherchez un stagiaire motivé ?</h2>
+    <p>Disponible pour un stage de 5 semaines à partir de mai 2026 en développement web ou cybersécurité.</p>
+    <a href="contact.html" class="btn-primary">Prendre contact</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="nav-logo">AH<span class="dot">.</span></span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
+      </div>
+      <p>© 2026 Adane Hamichi · Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
