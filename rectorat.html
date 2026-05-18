@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rectorat – Adane Hamichi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    .rectorat-section {
+      padding: 60px 5% 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .rectorat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .rectorat-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .rectorat-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .rectorat-block.blue::before { background: var(--accent2); }
+    .rectorat-block.green::before { background: var(--accent3); }
+    .rectorat-block.orange::before { background: var(--accent); }
+    .rectorat-block:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
+    .block-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .rectorat-block h3 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .rectorat-block p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px; }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .download-btn.primary { background: var(--accent); color: #fff; }
+    .download-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,53,0.3); }
+    .download-btn.secondary { background: var(--accent2); color: #fff; }
+    .download-btn.secondary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124,58,255,0.3); }
+    .download-btn.tertiary { background: var(--accent3); color: #0a0a0f; }
+    .download-btn.tertiary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,212,170,0.3); }
+
+    /* Placeholder attestation image */
+    .attestation-placeholder {
+      width: 100%;
+      background: var(--surface2);
+      border: 2px dashed var(--border);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+      min-height: 180px;
+      gap: 10px;
+    }
+    .attestation-placeholder .ph-icon { font-size: 2.5rem; opacity: 0.4; }
+    .attestation-placeholder p { color: var(--text-muted); font-size: 0.85rem; }
+    .attestation-placeholder strong { color: var(--accent); font-size: 0.9rem; }
+
+    .notice-box {
+      background: rgba(255,107,53,0.08);
+      border: 1px solid rgba(255,107,53,0.2);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .notice-box .notice-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .notice-box p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+    .notice-box strong { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo">AH<span class="dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil / CV</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="rectorat.html">Rectorat</a></li>
+    <li><a href="index.html#contact" class="btn-primary" style="padding: 8px 20px; color: white;">Contact</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMenu()">&#9776;</div>
+</nav>
+
+  <div class="page-hero">
+    <span class="tag">Documents officiels · Épreuve E5</span>
+    <h1>Espace <span class="accent">Rectorat</span></h1>
+    <p>Documents réglementaires BTS SIO SLAM — Session 2026</p>
+  </div>
+
+  <div class="rectorat-section">
+
+    <div class="notice-box">
+      <div class="notice-icon">ℹ️</div>
+      <p><strong>Page dédiée à l'évaluation E5.</strong> Cette page regroupe les documents officiels requis : tableau de synthèse des réalisations professionnelles (format XLS téléchargeable), attestations de stage des deux années. Les attestations de stage de 2ème année seront ajoutées en juillet 2026 à l'issue du stage.</p>
+    </div>
+
+    <div class="rectorat-grid">
+
+      <!-- TABLEAU DE SYNTHESE XLS -->
+      <div class="rectorat-block blue">
+        <div class="block-icon">📊</div>
+        <h3>Tableau de Synthèse E5</h3>
+        <p>Tableau de synthèse officiel des réalisations professionnelles au format Excel (XLS), conforme au référentiel BTS SIO. Recense l'ensemble des compétences du Bloc 1 mobilisées.</p>
+        <a href="tableau_synthese_E5_Hamichi.xlsx" target="_blank" class="download-btn secondary">
+          ⬇ Télécharger le tableau XLS
+        </a>
+      </div>
+
+      <!-- ATTESTATION STAGE 1ERE ANNEE -->
+      <div class="rectorat-block green">
+        <div class="block-icon">📋</div>
+        <h3>Attestation de Stage — 1ʳᵉ année</h3>
+        <p>Attestation de stage délivrée par <strong>ADP – Aéroports de Paris</strong> suite au stage de 2 semaines effectué en 2025.</p>
+        <div class="attestation-placeholder">
+          <div class="ph-icon">🖼</div>
+          <strong>À remplacer — Juillet 2025</strong>
+          <p>Insérer ici l'image de l'attestation de stage de 1ʳᵉ année (ADP – Aéroports de Paris)</p>
+        </div>
+        <a href="#" class="download-btn tertiary" onclick="alert('Document en cours d\'ajout'); return false;">
+          ⬇ Télécharger l'attestation
+        </a>
+      </div>
+
+      <!-- ATTESTATION STAGE 2EME ANNEE -->
+      <div class="rectorat-block orange">
+        <div class="block-icon">📋</div>
+        <h3>Attestation de Stage — 2ᵉ année</h3>
+        <p>Attestation de stage de 2ᵉ année (5 semaines · Mai 2026). Document à fournir à l'issue du stage en développement web ou cybersécurité.</p>
+        <div class="attestation-placeholder">
+          <div class="ph-icon">🖼</div>
+          <strong>À ajouter — Juillet 2026</strong>
+          <p>Insérer ici l'image de l'attestation de stage de 2ᵉ année</p>
+        </div>
+        <a href="#" class="download-btn primary" onclick="alert('Document disponible en juillet 2026'); return false;">
+          ⬇ Disponible en juillet 2026
+        </a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">
+      E5
+    </h2>
+  <h2 class="section-title">
+    E6
+  </h2>
+
+  <div class="edu-grid">
+
+  <div class="edu-card">
+    <h3>Tableau de synthèse</h3>
+
+    <a href="documents/tableau-synthese.xlsx"
+       download
+       class="btn-primary">
+       Télécharger
+    </a>
+  </div>
+
+  <div class="edu-card">
+    <h3>Attestation stage 1ère année</h3>
+
+    <img src="images/stage1.jpg">
+  </div>
+
+  <div class="edu-card">
+    <h3>Attestation stage 2ème année</h3>
+
+    <img src="images/stage2.jpg">
+  </div>
+
+</div>
+
+    <!-- RECAPITULATIF -->
+    <h2 class="section-title" style="margin-bottom:28px;">Récapitulatif <span class="accent">des documents</span></h2>
+    <div class="synthese-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Type</th>
+            <th>Statut</th>
+            <th>Lien</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tableau de synthèse E5 — Adane Hamichi</td>
+            <td><span class="tl-tag">XLS</span></td>
+            <td><span class="check">✓</span> Disponible</td>
+            <td><a href="tableau_synthese_E5_Hamichi.xlsx" target="_blank" style="color:var(--accent3);font-weight:600;">Télécharger →</a></td>
+          </tr>
+          <tr>
+            <td>Attestation de stage 1ʳᵉ année — ADP</td>
+            <td><span class="tl-tag">Image / PDF</span></td>
+            <td><span class="empty"></span> À fournir</td>
+            <td style="color:var(--text-muted);font-size:0.85rem;">À ajouter — Juillet 2025</td>
+          </tr>
+          <tr>
+            <td>Attestation de stage 2ᵉ année — Mai 2026</td>
+            <td><span class="tl-tag">Image / PDF</span></td>
+            <td><span class="empty"></span> À venir</td>
+            <td style="color:var(--text-muted);font-size:0.85rem;">À ajouter — Juillet 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="nav-logo">AH<span class="dot">.</span></span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
+      </div>
+      <p>© 2026 Adane Hamichi</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

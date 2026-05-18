@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Réalisations Professionnelles – Adane Hamichi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    .rp-section {
+      padding: 60px 5% 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .rp-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin-bottom: 60px;
+    }
+    .rp-table-wrap table { min-width: 800px; }
+    .rp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border: 1px solid rgba(255,107,53,0.3);
+      border-radius: 100px;
+      transition: background 0.2s;
+    }
+    .rp-link:hover { background: rgba(255,107,53,0.1); }
+    .comp-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .comp-pill {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .c1 { background: rgba(255,107,53,0.15); color: #ff6b35; border: 1px solid rgba(255,107,53,0.3); }
+    .c2 { background: rgba(124,58,255,0.15); color: #a78bfa; border: 1px solid rgba(124,58,255,0.3); }
+    .c3 { background: rgba(0,212,170,0.15); color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+    .c4 { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .c5 { background: rgba(236,72,153,0.15); color: #f472b6; border: 1px solid rgba(236,72,153,0.3); }
+    .c6 { background: rgba(99,102,241,0.15); color: #818cf8; border: 1px solid rgba(99,102,241,0.3); }
+    .context-filter {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(255,107,53,0.07);
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+    }
+    .legend-code {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1rem;
+      min-width: 28px;
+    }
+    .coming-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(255,107,53,0.12);
+      border: 1px solid rgba(255,107,53,0.25);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo">AH<span class="dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil / CV</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="rectorat.html">Rectorat</a></li>
+    <li><a href="index.html#contact" class="btn-primary" style="padding: 8px 20px; color: white;">Contact</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMenu()">&#9776;</div>
+</nav>
+
+  <div class="page-hero">
+    <span class="tag">Épreuve E5 · Bloc 1</span>
+    <h1>Réalisations <span class="accent">Professionnelles</span></h1>
+    <p>Tableau de synthèse des compétences mobilisées — BTS SIO SLAM 2025–2026</p>
+  </div>
+
+  <div class="rp-section">
+
+    <!-- LEGEND COMPETENCES -->
+    <h2 class="section-title" style="margin-bottom:24px;">Référentiel <span class="accent">Bloc 1</span></h2>
+    <div class="legend-grid">
+      <div class="legend-item">
+        <span class="comp-pill c1 legend-code">C1</span>
+        <span>Gérer le patrimoine informatique</span>
+      </div>
+      <div class="legend-item">
+        <span class="comp-pill c2 legend-code">C2</span>
+        <span>Répondre aux incidents &amp; demandes</span>
+      </div>
+      <div class="legend-item">
+        <span class="comp-pill c3 legend-code">C3</span>
+        <span>Développer la présence en ligne</span>
+      </div>
+      <div class="legend-item">
+        <span class="comp-pill c4 legend-code">C4</span>
+        <span>Travailler en mode projet</span>
+      </div>
+      <div class="legend-item">
+        <span class="comp-pill c5 legend-code">C5</span>
+        <span>Mettre à disposition un service</span>
+      </div>
+      <div class="legend-item">
+        <span class="comp-pill c6 legend-code">C6</span>
+        <span>Développement professionnel</span>
+      </div>
+    </div>
+
+    <!-- TABLE RP -->
+    <h2 class="section-title" style="margin-bottom:28px;">Liste des <span class="accent">réalisations</span></h2>
+
+    <div class="rp-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:240px;">Réalisation professionnelle</th>
+            <th style="min-width:120px;">Période</th>
+            <th style="min-width:100px;">Contexte</th>
+            <th style="min-width:200px;">Compétences mobilisées</th>
+            <th style="min-width:100px;">Détail</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- EN FORMATION -->
+          <tr class="section-header">
+            <td colspan="5">Réalisations en cours de formation — 2025–2026</td>
+          </tr>
+
+          <tr>
+            <td><strong>Étude et mise en place de base de données</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c1">C1</span>
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c5">C5</span>
+            </td>
+            <td><a href="rp-bdd.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Veille informationnelle</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="veille.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Création d'applications console</strong><br><small style="color:var(--text-muted);">Rubik's Cube, Drapeau…</small></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c5">C5</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-apps-console.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Découverte et étude des réseaux</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c1">C1</span>
+              <span class="comp-pill c2">C2</span>
+              <span class="comp-pill c5">C5</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-reseaux.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Mise en place d'un site web dynamique</strong><br><small style="color:var(--text-muted);">HTML / CSS / PHP</small></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c3">C3</span>
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c5">C5</span>
+            </td>
+            <td><a href="rp-site-web.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Mise en ligne d'un site web + FOG Project</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c1">C1</span>
+              <span class="comp-pill c3">C3</span>
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c5">C5</span>
+            </td>
+            <td><a href="rp-fog.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Création d'un compte LinkedIn professionnel</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c3">C3</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-linkedin.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Challenge Root.me</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c1">C1</span>
+              <span class="comp-pill c2">C2</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-rootme.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>TP CMS</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c3">C3</span>
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c5">C5</span>
+            </td>
+            <td><a href="rp-cms.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>W3C — Exploiter un référentiel</strong></td>
+            <td>2025–2026</td>
+            <td>Formation</td>
+            <td class="comp-pills">
+              <span class="comp-pill c1">C1</span>
+              <span class="comp-pill c3">C3</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-w3c.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <!-- STAGE 1ERE ANNEE -->
+          <tr class="section-header">
+            <td colspan="5">Réalisations en milieu professionnel — 1ʳᵉ année</td>
+          </tr>
+
+          <tr>
+            <td><strong>Stage ADP – Aéroports de Paris</strong><br><small style="color:var(--text-muted);">2 semaines · Suivi de projets, réunions de pilotage</small></td>
+            <td>2025</td>
+            <td>Stage</td>
+            <td class="comp-pills">
+              <span class="comp-pill c4">C4</span>
+              <span class="comp-pill c6">C6</span>
+            </td>
+            <td><a href="rp-adp.html" target="_blank" class="rp-link">Voir →</a></td>
+          </tr>
+
+          <!-- STAGE 2EME ANNEE -->
+          <tr class="section-header">
+            <td colspan="5">Réalisations en milieu professionnel — 2ᵉ année</td>
+          </tr>
+
+          <tr>
+            <td style="color:var(--text-muted);font-style:italic;">Stage à venir <span class="coming-badge">Mai 2026</span></td>
+            <td>Mai 2026</td>
+            <td>Stage</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PAR COMPETENCE -->
+    <h2 class="section-title" style="margin-bottom:28px;">Vue par <span class="accent">compétence</span></h2>
+    <div class="edu-grid" style="margin: 0 0 60px;">
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(255,107,53,0.12);color:#ff6b35;">C1</div>
+        <h3>Gérer le patrimoine informatique</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="rp-bdd.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ BDD</a></li>
+          <li><a href="rp-reseaux.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Réseaux</a></li>
+          <li><a href="rp-fog.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ FOG Project</a></li>
+          <li><a href="rp-rootme.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Root.me</a></li>
+          <li><a href="rp-w3c.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ W3C</a></li>
+        </ul>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(124,58,255,0.12);color:#a78bfa;">C2</div>
+        <h3>Répondre aux incidents</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="rp-reseaux.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Réseaux</a></li>
+          <li><a href="rp-rootme.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Root.me</a></li>
+        </ul>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(0,212,170,0.12);color:#00d4aa;">C3</div>
+        <h3>Présence en ligne</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="rp-site-web.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Site dynamique</a></li>
+          <li><a href="rp-fog.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ FOG + mise en ligne</a></li>
+          <li><a href="rp-linkedin.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ LinkedIn</a></li>
+          <li><a href="rp-cms.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ TP CMS</a></li>
+          <li><a href="rp-w3c.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ W3C</a></li>
+        </ul>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(251,191,36,0.12);color:#fbbf24;">C4</div>
+        <h3>Mode projet</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="rp-bdd.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ BDD</a></li>
+          <li><a href="rp-apps-console.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Apps console</a></li>
+          <li><a href="rp-site-web.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Site dynamique</a></li>
+          <li><a href="rp-fog.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ FOG Project</a></li>
+          <li><a href="rp-cms.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ TP CMS</a></li>
+          <li><a href="rp-adp.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Stage ADP</a></li>
+        </ul>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(236,72,153,0.12);color:#f472b6;">C5</div>
+        <h3>Mettre à disposition un service</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="rp-bdd.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ BDD</a></li>
+          <li><a href="rp-apps-console.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Apps console</a></li>
+          <li><a href="rp-reseaux.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Réseaux</a></li>
+          <li><a href="rp-site-web.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Site dynamique</a></li>
+          <li><a href="rp-fog.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ FOG Project</a></li>
+          <li><a href="rp-cms.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ TP CMS</a></li>
+        </ul>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-year" style="background:rgba(99,102,241,0.12);color:#818cf8;">C6</div>
+        <h3>Développement professionnel</h3>
+        <ul style="list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="veille.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Veille informationnelle</a></li>
+          <li><a href="rp-apps-console.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Apps console</a></li>
+          <li><a href="rp-reseaux.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Réseaux</a></li>
+          <li><a href="rp-linkedin.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ LinkedIn</a></li>
+          <li><a href="rp-rootme.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Root.me</a></li>
+          <li><a href="rp-w3c.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ W3C</a></li>
+          <li><a href="rp-adp.html" target="_blank" style="color:var(--accent3);font-size:0.88rem;">→ Stage ADP</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="nav-logo">AH<span class="dot">.</span></span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
+      </div>
+      <p>© 2026 Adane Hamichi</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

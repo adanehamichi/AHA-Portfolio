@@ -829,3 +829,13 @@ tbody td {
   .hero-badge { display: none; }
   .contact-grid { grid-template-columns: 1fr; }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+/* On ajuste la section dark pour qu'elle s'intègre mieux dans le flux */
+.section-dark {
+  background: var(--surface);
+  width: 100%;
+  margin: 0;
+}
