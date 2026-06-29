@@ -10,16 +10,16 @@
 <body>
 
   <nav class="navbar">
-  <div class="nav-logo">AH<span class="dot">.</span></div>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil / CV</a></li>
-    <li><a href="realisations.html">Réalisations</a></li>
-    <li><a href="veille.html">Veille</a></li>
-    <li><a href="rectorat.html">Rectorat</a></li>
-    <li><a href="index.html#contact" class="btn-primary" style="padding: 8px 20px; color: white;">Contact</a></li>
-  </ul>
-  <div class="burger" onclick="toggleMenu()">&#9776;</div>
-</nav>
+    <div class="nav-logo">AH<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="synthese.html">Tableau de synthèse</a></li>
+      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+  </nav>
 
   <div class="page-hero">
     <span class="tag">Reconnaissances officielles</span>
@@ -31,22 +31,15 @@
 
     <div class="certs-grid">
 
-      <!-- PIX -->
-      <div class="cert-card" id="pix" style="--card-color:#ff6b35;">
+      <div class="cert-card" style="--card-color:#2563eb;">
         <div class="cert-icon">🧩</div>
         <h3>PIX</h3>
         <div class="cert-org">Plateforme nationale · Gouvernement français</div>
         <p>Certification officielle des compétences numériques. Évalue 5 domaines : information & données, communication & collaboration, création de contenu, protection & sécurité, environnement numérique.</p>
-        <a href="preuves/pix.pdf"
-          target="_blank"
-          class="rp-link">
-          Voir la preuve →
-        </a>
         <span class="cert-badge">Compétences numériques</span>
       </div>
 
-      <!-- RGPD -->
-      <div class="cert-card" id="rgpd" style="--card-color:#7c3aff;">
+      <div class="cert-card" style="--card-color:#7c3aed;">
         <div class="cert-icon">🔒</div>
         <h3>Certification RGPD</h3>
         <div class="cert-org">Règlement Général sur la Protection des Données</div>
@@ -54,8 +47,7 @@
         <span class="cert-badge">Cybersécurité · Juridique</span>
       </div>
 
-      <!-- CISCO -->
-      <div class="cert-card" id="cisco" style="--card-color:#00d4aa;">
+      <div class="cert-card" style="--card-color:#059669;">
         <div class="cert-icon">🌐</div>
         <h3>Cisco Packet Tracer</h3>
         <div class="cert-org">Cisco Networking Academy</div>
@@ -66,7 +58,7 @@
     </div>
 
     <!-- TIMELINE PROGRESSION -->
-    <div style="margin-top:80px;">
+    <div style="margin-top:70px;">
       <h2 class="section-title">Progression <span class="accent">technique</span></h2>
       <div class="timeline">
         <div class="tl-item">
@@ -94,38 +86,15 @@
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 10px rgba(124,58,255,0.5);"></div>
-          <div class="tl-card" style="border-color:rgba(124,58,255,0.25);">
-            <span class="tl-tag" style="background:rgba(255,107,53,0.15);border-color:rgba(255,107,53,0.3);color:var(--accent);">Mai 2026 · À venir</span>
+          <div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 0 3px #ede9fe;"></div>
+          <div class="tl-card" style="border-color:#c4b5fd;">
+            <span class="tl-tag" style="background:#dbeafe;border-color:#bfdbfe;color:var(--accent);">Mai 2026 · À venir</span>
             <h3>Stage développement web / cybersécurité</h3>
             <p>5 semaines de stage recherché dans le développement web ou la cybersécurité pour mettre en pratique les acquis du BTS SIO SLAM.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="cert-card" style="--card-color:#00d4aa;">
-  <div class="cert-icon">🛡️</div>
-
-  <h3>MOOC ANSSI</h3>
-
-  <div class="cert-org">
-    Agence nationale de la sécurité des systèmes d'information
-  </div>
-
-  <p>
-    Formation dédiée à la cybersécurité et aux bonnes pratiques.
-  </p>
-
-  <span class="cert-badge">
-    Cybersécurité
-  </span>
-
-  <a href="preuves/mooc-anssi.pdf"
-     target="_blank"
-     class="rp-link">
-     Voir la preuve →
-  </a>
-</div>
 
   </div>
 
