@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adane Hamichi – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>CV – Adane Hamichi</title>
+  <meta name="description" content="Portfolio d'Adane Hamichi, étudiant en BTS SIO SLAM – Épreuve E5"/>
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- ═══ NAV ═══ -->
   <nav class="navbar">
     <div class="nav-logo">AH<span class="dot">.</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="synthese.html">Tableau de synthèse</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">CV</a></li>
+      <li><a href="realisations.html">Réalisations professionnelles</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="rectorat.html">Rectorat</a></li>
     </ul>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero">
     <div class="hero-bg">
       <div class="blob blob1"></div>
@@ -30,11 +30,12 @@
       <div class="blob blob3"></div>
     </div>
     <div class="hero-content">
+      <img src="img/adane_photo.png" alt="Adane Hamichi" class="hero-photo animate-fade">
       <span class="tag animate-fade">Étudiant BTS SIO · Option SLAM</span>
       <h1 class="animate-up">Hamichi<br><span class="accent">Adane</span></h1>
       <p class="hero-sub animate-up delay1">Développement Web &amp; Cybersécurité<br>Basé à Rouen, France</p>
       <div class="hero-btns animate-up delay2">
-        <a href="competences.html" class="btn-primary">Voir mes compétences</a>
+        <a href="#competences" class="btn-primary">Compétences</a>
         <a href="contact.html" class="btn-outline">Me contacter</a>
       </div>
     </div>
@@ -51,7 +52,7 @@
     </div>
   </section>
 
-  <!-- ABOUT STRIP -->
+  <!-- ═══ INFOS CLÉS ═══ -->
   <section class="about-strip">
     <div class="strip-grid">
       <div class="strip-card">
@@ -72,7 +73,7 @@
         <span class="strip-icon">🔒</span>
         <div>
           <strong>Cybersécurité &amp; Web</strong>
-          <p>RGPD · HTML/CSS/PHP · C#</p>
+          <p>RGPD · HTML/CSS/PHP · C# · ASP.NET</p>
         </div>
       </div>
       <div class="strip-card">
@@ -85,30 +86,360 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section">
-    <h2 class="section-title">Expériences <span class="accent">professionnelles</span></h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-tag">Projet</span>
-          <h3>Site web dynamique – HTML/CSS/PHP</h3>
-          <p>Respect de procédures et normes, gestion de documents techniques (plans, versions) et déploiement des livrables validés. Utilisation d'outils numériques.</p>
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- COMPÉTENCES BTS SIO — COMPLET E5                  -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="competences">
+    <h2 class="section-title">Compétences <span class="accent">BTS SIO</span></h2>
+
+    <!-- C1 : Gérer le patrimoine informatique -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c1" style="margin-right:8px;">C1</span> Gérer le patrimoine informatique</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Recenser et identifier les ressources numériques</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Exploiter des référentiels et normes (ITIL, COBIT)</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Conduire un projet d'évolution du SI</span><span>75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0.15s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Évaluer les risques et définir une politique de sécurité</span><span>72%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:72%;--d:0.2s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Rédiger documentation technique et utilisateurs</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%;--d:0.25s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">ITIL</span>
+        <span class="tech-tag">COBIT</span>
+        <span class="tech-tag">GLPI</span>
+        <span class="tech-tag">Inventaire parc</span>
+        <span class="tech-tag">Documentation</span>
+        <span class="tech-tag">Politique sécurité</span>
+        <span class="tech-tag">Sauvegarde</span>
+        <span class="tech-tag">PRA / PCA</span>
+      </div>
+    </div>
+
+    <!-- C2 : Répondre aux incidents et demandes -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c2" style="margin-right:8px;">C2</span> Répondre aux incidents et aux demandes</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Collecter et qualifier les incidents et demandes</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Prioriser et escalader les incidents</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:78%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Résoudre les incidents de premier et second niveau</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%;--d:0.15s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Documenter les solutions et clôturer les tickets</span><span>82%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:82%;--d:0.2s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">Ticketing (GLPI)</span>
+        <span class="tech-tag">Assistance utilisateur</span>
+        <span class="tech-tag">Dépannage</span>
+        <span class="tech-tag">Escalade</span>
+        <span class="tech-tag">Base de connaissances</span>
+        <span class="tech-tag">Procédures</span>
+      </div>
+    </div>
+
+    <!-- C3 : Développer la présence en ligne -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c3" style="margin-right:8px;">C3</span> Développer la présence en ligne de l'organisation</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Participer à la valorisation de l'image de l'entreprise</span><span>75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Référencement SEO et accessibilité (W3C, RGAA)</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Déployer et maintenir un site web</span><span>82%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:82%;--d:0.15s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Analyser le trafic et l'audience (KPIs)</span><span>65%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:65%;--d:0.2s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">Responsive</span>
+        <span class="tech-tag">SEO</span>
+        <span class="tech-tag">W3C</span>
+        <span class="tech-tag">RGAA</span>
+        <span class="tech-tag">Google Analytics</span>
+        <span class="tech-tag">Hébergement</span>
+      </div>
+    </div>
+
+    <!-- C4 : Concevoir et réaliser des solutions applicatives -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c4" style="margin-right:8px;">C4</span> Concevoir et réaliser des solutions applicatives</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Analyser les besoins et spécifications fonctionnelles</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Modéliser (UML, MCD, MLD, diagrammes)</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:78%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Développer une interface utilisateur (frontend)</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%;--d:0.15s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Développer la logique métier (backend)</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%;--d:0.2s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Développer la persistance des données (BDD)</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:78%;--d:0.25s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Tests unitaires et d'intégration</span><span>68%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:68%;--d:0.3s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Déploiement et recette</span><span>72%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:72%;--d:0.35s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">UML</span>
+        <span class="tech-tag">MCD / MLD</span>
+        <span class="tech-tag">Merise</span>
+        <span class="tech-tag">MVC</span>
+        <span class="tech-tag">CRUD</span>
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">Swagger</span>
+        <span class="tech-tag">Git / GitLab</span>
+      </div>
+    </div>
+
+    <!-- C5 : Administrer et superviser -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c5" style="margin-right:8px;">C5</span> Administrer et superviser les systèmes et réseaux</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Configurer et déployer des services réseau</span><span>72%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:72%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Administrer les comptes et les droits</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:78%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Superviser et monitorer les services</span><span>68%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:68%;--d:0.15s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Sécuriser les échanges (VPN, firewall, chiffrement)</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%;--d:0.2s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">Active Directory</span>
+        <span class="tech-tag">DNS / DHCP</span>
+        <span class="tech-tag">VPN</span>
+        <span class="tech-tag">Firewall</span>
+        <span class="tech-tag">Cisco Packet Tracer</span>
+        <span class="tech-tag">Linux</span>
+        <span class="tech-tag">Windows Server</span>
+        <span class="tech-tag">SSH</span>
+      </div>
+    </div>
+
+    <!-- C6 : Organiser le poste de travail -->
+    <div class="skill-group">
+      <h3><span class="comp-pill c6" style="margin-right:8px;">C6</span> Organiser son poste de travail et collaborer</h3>
+      <div class="skill-item">
+        <div class="skill-label"><span>Organiser et structurer son environnement de travail</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%;--d:0s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Collaborer via des outils collaboratifs (Teams, Git)</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%;--d:0.1s"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Veille technologique et réglementaire</span><span>75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0.15s"></div></div>
+      </div>
+      <div class="tech-tags" style="margin-top:14px;">
+        <span class="tech-tag">Microsoft Teams</span>
+        <span class="tech-tag">Outlook</span>
+        <span class="tech-tag">Git / GitLab</span>
+        <span class="tech-tag">Méthodes agiles</span>
+        <span class="tech-tag">RGPD</span>
+        <span class="tech-tag">Veille techno</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COMPÉTENCES TECHNIQUES (langages) ═══ -->
+  <section class="section-dark">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <h2 class="section-title">Langages &amp; <span class="accent">frameworks</span></h2>
+      <div class="skill-group">
+        <div class="skill-item">
+          <div class="skill-label"><span>HTML / CSS</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%;--d:0s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>PHP / MySQL</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0.1s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>JavaScript</span><span>70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%;--d:0.15s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>C# / ASP.NET Core</span><span>72%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:72%;--d:0.2s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>SQL Server / EF Core</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0.25s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Python</span><span>55%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:55%;--d:0.3s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Bash / PowerShell</span><span>50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:50%;--d:0.35s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Java (bases)</span><span>40%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:40%;--d:0.4s"></div></div>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-tag">Stage · 2 semaines</span>
-          <h3>Stagiaire – ADP (Aéroports de Paris)</h3>
-          <p>Participation aux réunions de pilotage, prise de notes, synthèses et actions à suivre. Suivi de projets en collaboration avec les équipes internes et partenaires externes. Rigueur, organisation, respect des délais.</p>
+      <div class="skill-group">
+        <h3>Outils &amp; environnements</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Visual Studio 2022</span>
+          <span class="tech-tag">VS Code</span>
+          <span class="tech-tag">Git / GitLab</span>
+          <span class="tech-tag">SSMS</span>
+          <span class="tech-tag">Swagger</span>
+          <span class="tech-tag">Postman</span>
+          <span class="tech-tag">Entity Framework</span>
+          <span class="tech-tag">Razor (.cshtml)</span>
+          <span class="tech-tag">JSON</span>
+          <span class="tech-tag">phpMyAdmin</span>
+          <span class="tech-tag">XAMPP</span>
+          <span class="tech-tag">FileZilla</span>
+          <span class="tech-tag">Wireshark</span>
+          <span class="tech-tag">Cisco Packet Tracer</span>
+          <span class="tech-tag">Linux (Ubuntu)</span>
+          <span class="tech-tag">Windows Server</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Travail en équipe</span>
+          <span class="tech-tag">Rigueur &amp; organisation</span>
+          <span class="tech-tag">Adaptabilité</span>
+          <span class="tech-tag">Autonomie</span>
+          <span class="tech-tag">Communication</span>
+          <span class="tech-tag">Gestion du temps</span>
+          <span class="tech-tag">Esprit d'analyse</span>
+          <span class="tech-tag">Résolution de problèmes</span>
+          <span class="tech-tag">Curiosité technologique</span>
+          <span class="tech-tag">Sens du service</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Langues</h3>
+        <div class="skill-item">
+          <div class="skill-label"><span>Français</span><span>Langue maternelle</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:100%;--d:0s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Anglais</span><span>Intermédiaire (B1)</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%;--d:0.1s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Arabe</span><span>Notions</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:35%;--d:0.2s"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMATIONS -->
+  <!-- ═══ EXPÉRIENCES PROFESSIONNELLES ═══ -->
+  <section class="section">
+    <h2 class="section-title">Expériences <span class="accent">professionnelles</span></h2>
+    <div class="timeline">
+
+      <!-- Stage Veoneer -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-tag">Stage · 5 semaines · 26/05 – 26/06/2026</span>
+          <h3>Développeur Web – Veoneer (Saint-Étienne-du-Rouvray)</h3>
+          <p>Intégré au service IT d'un équipementier automobile spécialisé dans la sécurité passive (airbags, capteurs de collision). <strong>Reconstruction complète</strong> d'une application web CHSCT de déclaration et gestion des accidents du travail, les fichiers sources ayant été perdus.</p>
+          <p style="margin-top:10px;"><strong>Environnement technique :</strong> ASP.NET Core Web API, C#, Entity Framework Core (Code-First), SQL Server, Razor (.cshtml), JavaScript, JSON, Swagger, GitLab, Visual Studio 2022, SSMS.</p>
+          <p style="margin-top:10px;"><strong>Missions réalisées :</strong></p>
+          <ul class="tl-missions">
+            <li>Reconstruction complète du projet depuis zéro (solution, structure MVC/API, packages NuGet)</li>
+            <li>Modélisation Code-First &amp; migration EF Core (entités Accident, Employé, Service, Gravité…)</li>
+            <li>Développement CRUD complet (contrôleurs API : GET, POST, PUT, DELETE)</li>
+            <li>Création du formulaire structuré de déclaration d'accidents (type, gravité, description)</li>
+            <li>Vues Razor + JavaScript (validation, appels API asynchrones fetch/JSON)</li>
+            <li>Documentation et tests de l'API via Swagger</li>
+            <li>Page de liste complète des accidents avec recherche par mot-clé/date</li>
+            <li>Page de login temporaire, page d'accueil sensibilisation CHSCT</li>
+            <li>Connexion API ↔ Base de données SQL Server</li>
+            <li>Tests fonctionnels, correction de bugs, résolution d'incidents</li>
+          </ul>
+          <p style="margin-top:10px;"><strong>Tuteurs :</strong> Steve Lebigot &amp; Nathan Fleuret</p>
+          <p style="margin-top:8px;"><strong>Communication :</strong> Microsoft Teams (coordination quotidienne, 1-2 réunions/jour) + Outlook (adresse adane.hamichi@veoneer.com)</p>
+          <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+            <a href="rp-veoneer.html" class="btn-primary" style="font-size:0.82rem;padding:9px 20px;">Voir la RP détaillée</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet formation -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-tag">Projet de formation</span>
+          <h3>Site web dynamique – HTML/CSS/PHP/MySQL</h3>
+          <p>Réalisation d'un site web dynamique dans le cadre de la formation BTS SIO. Respect des normes W3C, gestion de documents techniques (plans, versions) et déploiement des livrables validés. Utilisation d'outils numériques professionnels pour le développement et les tests.</p>
+          <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+            <a href="rp-site-web.html" class="btn-outline" style="font-size:0.82rem;padding:9px 20px;">Voir la RP détaillée</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage ADP -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-tag">Stage · 2 semaines · 2025</span>
+          <h3>Stagiaire – ADP (Aéroports de Paris)</h3>
+          <p>Participation aux réunions de pilotage, prise de notes, synthèses et actions à suivre. Suivi de projets en collaboration avec les équipes internes et partenaires externes. Rigueur, organisation, respect des délais. Découverte du fonctionnement d'une grande structure et de la gestion de projet en environnement professionnel.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FORMATIONS ═══ -->
   <section class="section-dark">
     <div class="section" style="padding-top:0;padding-bottom:0;">
       <h2 class="section-title">Formation <span class="accent">académique</span></h2>
@@ -116,14 +447,14 @@
         <div class="edu-card">
           <div class="edu-year">2025–2026</div>
           <h3>BTS SIO – SLAM</h3>
-          <p>Lycée La Châtaigneraie</p>
-          <p class="edu-detail">Services Informatiques aux Organisations<br>Option : Solutions Logicielles et Applications Métiers</p>
+          <p>Lycée La Châtaigneraie, Rouen</p>
+          <p class="edu-detail">Services Informatiques aux Organisations<br>Option : Solutions Logicielles et Applications Métiers<br>Épreuve E5 : Support et mise à disposition de services informatiques</p>
         </div>
         <div class="edu-card">
           <div class="edu-year">2024–2025</div>
           <h3>École d'Architecture</h3>
           <p>UMONS (Belgique)</p>
-          <p class="edu-detail">Cursus d'architecture — rigueur, précision et gestion de projet</p>
+          <p class="edu-detail">Cursus d'architecture — rigueur, précision et gestion de projet<br>Approche créative et technique de la conception</p>
         </div>
         <div class="edu-card">
           <div class="edu-year">Juin 2024</div>
@@ -135,29 +466,115 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section class="section">
+    <h2 class="section-title">Certifications <span class="accent">&amp; attestations</span></h2>
+    <div class="certs-grid">
+      <div class="cert-card" style="--card-color:var(--accent3);">
+        <div class="cert-icon">🎯</div>
+        <h3>PIX</h3>
+        <p class="cert-org">France · Certification numérique de référence</p>
+        <p>Évaluation des compétences numériques : information, communication, création de contenu, protection, environnement numérique.</p>
+        <span class="cert-badge">Obtenu</span>
+      </div>
+      <div class="cert-card" style="--card-color:#b388ff;">
+        <div class="cert-icon">🛡️</div>
+        <h3>RGPD</h3>
+        <p class="cert-org">CNIL · Règlement Général sur la Protection des Données</p>
+        <p>Formation et certification sur la conformité au RGPD : collecte, traitement, droits des personnes, obligations des organismes.</p>
+        <span class="cert-badge">Obtenu</span>
+      </div>
+      <div class="cert-card" style="--card-color:var(--accent);">
+        <div class="cert-icon">🌐</div>
+        <h3>Cisco Packet Tracer</h3>
+        <p class="cert-org">Cisco Networking Academy</p>
+        <p>Simulation de réseaux informatiques : configuration de routeurs, commutateurs, protocoles, adresses IP, sécurité réseau.</p>
+        <span class="cert-badge">Obtenu</span>
+      </div>
+    </div>
+    <div style="margin-top:28px;text-align:center;">
+      <a href="certifications.html" class="btn-outline">Voir la page détaillée des certifications</a>
+    </div>
+  </section>
+
+  <!-- ═══ COORDONNÉES ═══ -->
+  <section class="section-dark">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <h2 class="section-title">Coordonnées <span class="accent">&amp; contact</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="c-item">
+            <span class="c-icon">📧</span>
+            <div>
+              <label>Email</label>
+              <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">adane.hamichi@campus-la-chataigneraie.org</a>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-icon">📱</span>
+            <div>
+              <label>Téléphone</label>
+              <span>+33 6 18 11 40 47</span>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-icon">🔗</span>
+            <div>
+              <label>LinkedIn</label>
+              <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">Adane Hamichi</a>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-icon">📍</span>
+            <div>
+              <label>Localisation</label>
+              <span>Rouen, France</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <h3>M'envoyer un message</h3>
+          <form class="contact-form" action="mailto:adane.hamichi@campus-la-chataigneraie.org" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="Nom" placeholder="Votre nom" required/>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" placeholder="votre@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="msg">Message</label>
+              <textarea id="msg" name="Message" placeholder="Votre message…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
   <section class="cta-section">
     <h2>Vous recherchez un stagiaire motivé ?</h2>
     <p>Disponible pour un stage de 5 semaines à partir de mai 2026 en développement web ou cybersécurité.</p>
     <a href="contact.html" class="btn-primary">Prendre contact</a>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="footer-inner">
       <span class="nav-logo">AH<span class="dot">.</span></span>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
       </div>
-      <p>© 2026 Adane Hamichi · Tous droits réservés</p>
+      <p>© 2026 Adane Hamichi · Portfolio BTS SIO SLAM · Épreuve E5</p>
     </div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    }
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
   </script>
 </body>
 </html>

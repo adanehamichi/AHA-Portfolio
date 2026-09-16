@@ -1,218 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Veille Technologique – Adane Hamichi</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
-<style>
-    .veille-section {
-      padding: 60px 5% 100px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .veille-intro {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-bottom: 60px;
-    }
-    .veille-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 28px;
-    }
-    .veille-card h4 {
-      font-family: var(--font-head);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-    .veille-card p, .veille-card li { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
-    .veille-card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .veille-card ul li::before { content: "→ "; color: var(--accent3); }
-
-    .outils-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-bottom: 60px;
-    }
-    .outil-card {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .outil-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
-    .outil-card .outil-icon { font-size: 2rem; margin-bottom: 10px; }
-    .outil-card h4 { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
-    .outil-card p { color: var(--text-muted); font-size: 0.8rem; }
-    .outil-badge {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 2px 10px;
-      border-radius: 100px;
-      font-size: 0.72rem;
-      font-weight: 600;
-    }
-    .badge-main { background: rgba(0,212,170,0.12); color: var(--accent3); border: 1px solid rgba(0,212,170,0.3); }
-    .badge-new { background: rgba(255,107,53,0.12); color: var(--accent); border: 1px solid rgba(255,107,53,0.3); }
-
-    .news-month {
-      margin-bottom: 50px;
-    }
-    .month-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .month-badge {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 6px 20px;
-      font-family: var(--font-head);
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--accent);
-    }
-    .month-line {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-    }
-    .news-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      transition: border-color 0.2s;
-    }
-    .news-card:hover { border-color: rgba(0,212,170,0.3); }
-    .news-date {
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
-    }
-    .news-card h4 {
-      font-family: var(--font-head);
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      line-height: 1.4;
-    }
-    .news-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; }
-    .news-source {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 0.78rem;
-      color: var(--accent3);
-      font-weight: 600;
-    }
-    .news-source a { color: inherit; }
-    .news-source a:hover { text-decoration: underline; }
-
-    .mise-oeuvre-card {
-      background: linear-gradient(135deg, rgba(124,58,255,0.08) 0%, rgba(0,212,170,0.08) 100%);
-      border: 1px solid rgba(124,58,255,0.2);
-      border-radius: var(--radius);
-      padding: 40px;
-      margin-top: 60px;
-    }
-    .mise-oeuvre-card h3 {
-      font-family: var(--font-head);
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-    .mise-oeuvre-card p { color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
-  </style>
 <body>
-
   <nav class="navbar">
     <div class="nav-logo">AH<span class="dot">.</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil / CV</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">CV</a></li>
+      <li><a href="realisations.html">Réalisations professionnelles</a></li>
       <li><a href="veille.html" class="active">Veille</a></li>
       <li><a href="rectorat.html">Rectorat</a></li>
-      <li><a href="index.html#contact" class="btn-primary" style="padding: 8px 20px; color:white;">Contact</a></li>
     </ul>
-    <div class="burger" onclick="toggleMenu()">&#9776;</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </nav>
-
   <div class="page-hero">
     <span class="tag">Compétence C6 · Développement professionnel</span>
     <h1>Veille <span class="accent">Technologique</span></h1>
-    <p>L'évolution des Systèmes de Gestion de Bases de Données (SGBD)</p>
+    <p>Systèmes de Gestion de Bases de Données — Évolutions &amp; tendances 2025–2026</p>
   </div>
-
   <div class="veille-section">
+    <!-- MÉTHODOLOGIE -->
     <div class="veille-intro">
-      <div class="veille-card">
-        <h4>🎯 Thème de veille</h4>
-        <p>Les bases de données sont le pilier des technologies numériques[cite: 70]. Elles permettent de stocker, gérer et exploiter des informations de manière structurée et sécurisée[cite: 7, 26].</p>
-      </div>
-      <div class="veille-card">
-        <h4>🔍 Méthodologie</h4>
-        <ul>
-          <li>Alertes personnalisées [cite: 44]</li>
-          <li>Flux RSS [cite: 45]</li>
-          <li>Consultation de sites spécialisés [cite: 46]</li>
-          <li>Suivi d'experts du domaine [cite: 47]</li>
-        </ul>
+      <h2 class="section-title" style="margin-bottom:16px;">Méthodologie de <span class="accent">veille</span></h2>
+      <p>Pour mener cette veille, j'ai utilisé diverses sources et outils afin de rester informé des dernières évolutions dans le domaine des SGBD :</p>
+      <div class="veille-tools">
+        <div class="vtool"><span>📡</span><div><strong>Google Alerts</strong><br><small>Mots-clés : « SGBD », « NoSQL vs SQL », « base de données cloud »</small></div></div>
+        <div class="vtool"><span>🗂</span><div><strong>Flux RSS – Feedly</strong><br><small>Abonné à : ZDNet, Journal du Net, Developpez.com</small></div></div>
+        <div class="vtool"><span>💬</span><div><strong>Réseaux professionnels</strong><br><small>LinkedIn, Twitter/X, groupes spécialisés</small></div></div>
+        <div class="vtool"><span>📰</span><div><strong>Revues &amp; blogs</strong><br><small>Blog ANSI, MongoDB Blog, PostgreSQL Weekly</small></div></div>
       </div>
     </div>
-
-    <h2 class="section-title">Actualités <span class="accent">2026</span></h2>
-    <div class="news-grid">
-      <div class="news-card">
-        <div class="news-date">Février 2026</div>
-        <h4>L'IA au cœur de la gestion des données</h4>
-        <p>Un rapport souligne que les entreprises investissent massivement dans l'IA pour améliorer l'analyse et la prise de décision[cite: 54, 55].</p>
-      </div>
-      <div class="news-card">
-        <div class="news-date">Récent</div>
-        <h4>Automatisation et Optimisation</h4>
-        <p>L'IA permet désormais d'automatiser l'optimisation des performances et de détecter plus facilement les anomalies de sécurité[cite: 51].</p>
+    <!-- THÉMATIQUE -->
+    <div style="margin-top:48px;">
+      <h2 class="section-title" style="margin-bottom:16px;">Thématique : <span class="accent">SGBD</span></h2>
+      <p>Les Systèmes de Gestion de Bases de Données sont au cœur de toute application métier. Leur évolution impacte directement l'architecture logicielle, la performance, la sécurité et le coût des projets informatiques.</p>
+    </div>
+    <!-- ARTICLES -->
+    <div style="margin-top:40px;">
+      <h2 class="section-title" style="margin-bottom:24px;">Articles <span class="accent">décodés</span></h2>
+      <div class="veille-articles">
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Nov. 2025</span>
+            <span class="varticle-tag">SQL vs NoSQL</span>
+          </div>
+          <h3>PostgreSQL 17 : la révolution des index et du partitionnement</h3>
+          <p>La version 17 de PostgreSQL apporte des améliorations majeures sur le partitionnement, les index et les performances de requêtes parallélisées. Le partitionnement déclaratif devient plus flexible et performant.</p>
+          <a href="https://www.postgresql.org/about/news/postgresql-17-released/" target="_blank" rel="noopener" class="rp-link">Source →</a>
+        </article>
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Déc. 2025</span>
+            <span class="varticle-tag">Cloud</span>
+          </div>
+          <h3>Le marché des SGBD cloud dépasse 80 Mds$ en 2025</h3>
+          <p>Le marché mondial des bases de données cloud atteint un record historique porté par AWS, Azure et GCP. Les SGBD managés (RDS, Cosmos DB, Cloud SQL) dominent le paysage enterprise.</p>
+          <a href="https://www.gartner.com/en/information-technology" target="_blank" rel="noopener" class="rp-link">Source Gartner →</a>
+        </article>
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Jan. 2026</span>
+            <span class="varticle-tag">NoSQL</span>
+          </div>
+          <h3>MongoDB 8 : la base documentaire accélère les transactions ACID</h3>
+          <p>MongoDB 8 renforce la prise en charge native des transactions ACID multi-documents, rapprochant les bases NoSQL du niveau de fiabilité traditionnellement réservé aux SGBDR.</p>
+          <a href="https://www.mongodb.com/blog" target="_blank" rel="noopener" class="rp-link">Source MongoDB →</a>
+        </article>
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Fév. 2026</span>
+            <span class="varticle-tag">Sécurité</span>
+          </div>
+          <h3>Chiffrement en transit et au repos : les nouvelles normes SGBD</h3>
+          <p>Les réglementations RGPD et NIS2 imposent un chiffrement systématique des données au repos et en transit. SQL Server, PostgreSQL et Oracle renforcent leur TDE et TLS par défaut.</p>
+          <a href="https://www.cnil.fr/fr/securite-des-donnees" target="_blank" rel="noopener" class="rp-link">Source CNIL →</a>
+        </article>
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Mars 2026</span>
+            <span class="varticle-tag">IA</span>
+          </div>
+          <h3>L'IA vectorielle transforme les SGBD : pgvector, Atlas Vector Search</h3>
+          <p>L'intégration d'index vectoriels dans les SGBD (pgvector pour PostgreSQL, Atlas Vector Search pour MongoDB) ouvre la voie à des requêtes sémantiques directement en base, sans pipeline externe.</p>
+          <a href="https://github.com/pgvector/pgvector" target="_blank" rel="noopener" class="rp-link">Source pgvector →</a>
+        </article>
+        <article class="varticle">
+          <div class="varticle-header">
+            <span class="varticle-date">Avr. 2026</span>
+            <span class="varticle-tag">Écosystème</span>
+          </div>
+          <h3>SQL Server 2025 : l'intégration native d'Azure et du Machine Learning</h3>
+          <p>Microsoft SQL Server 2025 intègre des capacités de scoring ML directement en T-SQL, rapprochant l'analyse prédictive de la couche données. Pertinent pour les environnements .NET/ASP.NET Core.</p>
+          <a href="https://learn.microsoft.com/fr-fr/sql/sql-server/" target="_blank" rel="noopener" class="rp-link">Source Microsoft →</a>
+        </article>
       </div>
     </div>
-
-    <div class="mise-oeuvre-card">
-      <h3>🚀 Synthèse & Types</h3>
-      <p>Ma veille couvre trois types majeurs de solutions :</p>
-      <ul>
-        <li><strong>Relationnel (SQL) :</strong> Les classiques comme MySQL ou PostgreSQL utilisant des tables[cite: 31, 32].</li>
-        <li><strong>NoSQL :</strong> Pour les données massives et non structurées (Big Data)[cite: 33].</li>
-        <li><strong>Cloud :</strong> Pour une évolutivité maximale et un accès à distance[cite: 34].</li>
+    <!-- LIEN AVEC VEONEER -->
+    <div style="margin-top:48px;padding:32px;border-radius:18px;background:var(--card);border:1px solid var(--border);">
+      <h3 style="margin-bottom:10px;">🔗 Lien avec mon stage Veoneer</h3>
+      <p>Lors de mon stage chez Veoneer, j'ai utilisé <strong>SQL Server</strong> avec <strong>Entity Framework Core</strong> comme ORM. La veille sur les SGBD m'a permis de :</p>
+      <ul style="margin-top:12px;display:flex;flex-direction:column;gap:8px;color:var(--text-muted);">
+        <li>→ Comprendre les enjeux du mapping objet-relationnel (EF Core)</li>
+        <li>→ Optimiser les requêtes LINQ et les migrations Code-First</li>
+        <li>→ Assurer la cohérence des données via les transactions EF</li>
+        <li>→ Documenter les migrations dans Swagger pour l'équipe</li>
       </ul>
     </div>
+    <!-- CONCLUSION -->
+    <div style="margin-top:40px;padding:28px;border-radius:18px;background:rgba(255,107,53,0.06);border-left:4px solid var(--accent);">
+      <h3 style="margin-bottom:8px;">Conclusion</h3>
+      <p style="color:var(--text-muted);">Cette veille m'a permis de maintenir une vision actualisée du paysage SGBD, d'identifier les tendances (cloud, IA vectorielle, NoSQL ACID) et de mieux comprendre les choix techniques opérés en entreprise lors de mon stage. Elle contribue directement à la compétence <strong>C6 – Développement professionnel continu</strong>.</p>
+    </div>
   </div>
-
   <footer class="footer">
     <div class="footer-inner">
       <span class="nav-logo">AH<span class="dot">.</span></span>
-      <p>© 2026 Adane Hamichi · Veille Technologique</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
+      </div>
+      <p>© 2026 Adane Hamichi</p>
     </div>
   </footer>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+  </script>
 </body>
 </html>

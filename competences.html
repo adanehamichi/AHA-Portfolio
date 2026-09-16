@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Compétences – Adane Hamichi</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-logo">AH<span class="dot">.</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="competences.html" class="active">Compétences</a></li>
-      <li><a href="synthese.html">Tableau de synthèse</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">CV</a></li>
+      <li><a href="realisations.html">Réalisations professionnelles</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="rectorat.html">Rectorat</a></li>
     </ul>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </nav>
-
   <div class="page-hero">
-    <span class="tag">Mon arsenal</span>
+    <span class="tag">Mon arsenal technique</span>
     <h1>Mes <span class="accent">Compétences</span></h1>
     <p>Développement web, programmation, cybersécurité et administration système</p>
   </div>
-
-  <div class="skills-section">
-
-    <div class="skills-grid">
-
+  <div class="section">
+    <div class="skills-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;">
+      <!-- Dev Web -->
       <div class="skill-group">
         <h3>🌐 Développement Web</h3>
         <div class="skill-item">
-          <div class="skill-label"><span>HTML</span><span>Avancé</span></div>
+          <div class="skill-label"><span>HTML5</span><span>Avancé</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:88%;--d:0.1s"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-label"><span>CSS</span><span>Avancé</span></div>
+          <div class="skill-label"><span>CSS3</span><span>Avancé</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:82%;--d:0.2s"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-label"><span>PHP</span><span>Intermédiaire</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:65%;--d:0.3s"></div></div>
         </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>JavaScript</span><span>Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:62%;--d:0.4s"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>ASP.NET Core (.cshtml)</span><span>Notions+</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:50%;--d:0.5s"></div></div>
+        </div>
       </div>
-
+      <!-- Prog -->
       <div class="skill-group">
         <h3>💻 Programmation</h3>
         <div class="skill-item">
@@ -58,13 +61,17 @@
           <div class="skill-bar"><div class="skill-fill" style="width:72%;--d:0.2s"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-label"><span>SQL Server</span><span>Notions</span></div>
+          <div class="skill-label"><span>SQL Server</span><span>Notions+</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:55%;--d:0.3s"></div></div>
         </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Entity Framework</span><span>Notions</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:42%;--d:0.4s"></div></div>
+        </div>
       </div>
-
+      <!-- Cybersécurité -->
       <div class="skill-group">
-        <h3>🔒 Cybersécurité & Système</h3>
+        <h3>🔒 Cybersécurité &amp; Système</h3>
         <div class="skill-item">
           <div class="skill-label"><span>RGPD</span><span>Certifié</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:80%;--d:0.1s"></div></div>
@@ -78,11 +85,11 @@
           <div class="skill-bar"><div class="skill-fill" style="width:62%;--d:0.3s"></div></div>
         </div>
       </div>
-
+      <!-- Admin -->
       <div class="skill-group">
         <h3>🖥️ Administration</h3>
         <div class="skill-item">
-          <div class="skill-label"><span>Installation & Config OS</span><span>Bon niveau</span></div>
+          <div class="skill-label"><span>Installation &amp; Config OS</span><span>Bon niveau</span></div>
           <div class="skill-bar"><div class="skill-fill" style="width:75%;--d:0.1s"></div></div>
         </div>
         <div class="skill-item">
@@ -94,19 +101,21 @@
           <div class="skill-bar"><div class="skill-fill" style="width:50%;--d:0.3s"></div></div>
         </div>
       </div>
-
     </div>
-
     <!-- TECH TAGS -->
-    <div class="skill-group" style="margin-bottom:36px;">
-      <h3>🛠️ Technologies & Outils</h3>
+    <div class="skill-group" style="margin-top:36px;">
+      <h3>🛠️ Technologies &amp; Outils</h3>
       <div class="tech-tags">
         <span class="tech-tag">HTML5</span>
         <span class="tech-tag">CSS3</span>
         <span class="tech-tag">PHP</span>
         <span class="tech-tag">C#</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">ASP.NET Core</span>
+        <span class="tech-tag">Entity Framework</span>
         <span class="tech-tag">MySQL</span>
         <span class="tech-tag">SQL Server</span>
+        <span class="tech-tag">Swagger</span>
         <span class="tech-tag">PowerShell</span>
         <span class="tech-tag">MS-DOS</span>
         <span class="tech-tag">Cisco Packet Tracer</span>
@@ -117,11 +126,15 @@
         <span class="tech-tag">Root.me</span>
         <span class="tech-tag">Windows Server</span>
         <span class="tech-tag">Linux</span>
+        <span class="tech-tag">Git / GitLab</span>
+        <span class="tech-tag">VS Code</span>
+        <span class="tech-tag">Visual Studio</span>
+        <span class="tech-tag">Microsoft Teams</span>
+        <span class="tech-tag">Outlook</span>
       </div>
     </div>
-
     <!-- SOFT SKILLS -->
-    <div class="skill-group">
+    <div class="skill-group" style="margin-top:36px;">
       <h3>🤝 Savoir-être</h3>
       <div class="tech-tags">
         <span class="tech-tag">Rigueur</span>
@@ -131,9 +144,9 @@
         <span class="tech-tag">Autonomie</span>
         <span class="tech-tag">Curiosité technique</span>
         <span class="tech-tag">Veille informationnelle</span>
+        <span class="tech-tag">Communication</span>
       </div>
     </div>
-
     <!-- LANGUES -->
     <div class="skill-group" style="margin-top:36px;">
       <h3>🌍 Langues</h3>
@@ -150,24 +163,19 @@
         <div class="skill-bar"><div class="skill-fill" style="width:20%;--d:0.3s"></div></div>
       </div>
     </div>
-
   </div>
-
   <footer class="footer">
     <div class="footer-inner">
       <span class="nav-logo">AH<span class="dot">.</span></span>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
       </div>
       <p>© 2026 Adane Hamichi</p>
     </div>
   </footer>
-
   <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    }
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
   </script>
 </body>
 </html>

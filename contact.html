@@ -1,130 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – Adane Hamichi</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-logo">AH<span class="dot">.</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="synthese.html">Tableau de synthèse</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">CV</a></li>
+      <li><a href="realisations.html" class="active">Réalisations professionnelles</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="rectorat.html">Rectorat</a></li>
     </ul>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </nav>
-
   <div class="page-hero">
-    <span class="tag">Disponible dès mai 2026</span>
+    <span class="tag">Restons en contact</span>
     <h1>Me <span class="accent">Contacter</span></h1>
-    <p>Pour toute proposition de stage ou prise de contact professionnelle</p>
+    <p>N'hésitez pas à me joindre pour toute question</p>
   </div>
-
   <div class="contact-section">
     <div class="contact-grid">
-
+      <!-- COORDONNÉES -->
       <div class="contact-info">
         <h3>Coordonnées</h3>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">📧</div>
+        <div class="c-item">
+          <span class="c-icon">📧</span>
           <div>
-            <strong>Email</strong>
+            <label>Email</label>
             <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">adane.hamichi@campus-la-chataigneraie.org</a>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">📞</div>
+        <div class="c-item">
+          <span class="c-icon">📱</span>
           <div>
-            <strong>Téléphone</strong>
+            <label>Téléphone</label>
             <a href="tel:+33618114047">+33 6 18 11 40 47</a>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
+        <div class="c-item">
+          <span class="c-icon">🔗</span>
           <div>
-            <strong>Localisation</strong>
-            <span>Rouen, France · Permis B</span>
+            <label>LinkedIn</label>
+            <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">adane-hamichi-792073328</a>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">💼</div>
+        <div class="c-item">
+          <span class="c-icon">🏫</span>
           <div>
-            <strong>LinkedIn</strong>
-            <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">Voir le profil →</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">🗓️</div>
-          <div>
-            <strong>Disponibilité</strong>
-            <span>Stage 5 semaines · Mai 2026<br>Développement Web ou Cybersécurité</span>
+            <label>Centre de formation</label>
+            <span>Lycée La Châtaigneraie, Rouen</span>
           </div>
         </div>
       </div>
-
-      <div class="contact-form">
-        <label for="name">Nom & Prénom</label>
-        <input type="text" id="name" placeholder="Votre nom" />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="votre@email.com" />
-
-        <label for="subject">Objet</label>
-        <input type="text" id="subject" placeholder="Proposition de stage, information…" />
-
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Votre message…"></textarea>
-
-        <button class="btn-primary" onclick="sendMessage()">Envoyer le message</button>
-
-        <p id="form-status" style="margin-top:14px;color:var(--accent3);font-size:0.9rem;display:none;">
-          ✅ Message envoyé ! Je reviendrai vers vous rapidement.
-        </p>
+      <!-- FORMULAIRE -->
+      <div class="contact-form-wrap">
+        <h3>M'envoyer un message</h3>
+        <form class="contact-form" action="mailto:adane.hamichi@campus-la-chataigneraie.org" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="Nom" placeholder="Votre nom" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="Email" placeholder="votre@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="Sujet" placeholder="Objet du message"/>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="6" placeholder="Votre message…" required></textarea>
+          </div>
+          <button type="submit" class="btn-cta">Envoyer le message</button>
+        </form>
       </div>
-
     </div>
   </div>
-
   <footer class="footer">
     <div class="footer-inner">
       <span class="nav-logo">AH<span class="dot">.</span></span>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/adane-hamichi-792073328/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:adane.hamichi@campus-la-chataigneraie.org">Email</a>
       </div>
       <p>© 2026 Adane Hamichi</p>
     </div>
   </footer>
-
   <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    }
-    function sendMessage() {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      if (!name || !email || !message) {
-        alert('Veuillez remplir tous les champs obligatoires.');
-        return;
-      }
-      const mailto = `mailto:adane.hamichi@campus-la-chataigneraie.org?subject=${encodeURIComponent(subject || 'Contact depuis portfolio')}&body=${encodeURIComponent('De : ' + name + ' (' + email + ')\n\n' + message)}`;
-      window.location.href = mailto;
-      document.getElementById('form-status').style.display = 'block';
-    }
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
   </script>
 </body>
 </html>
